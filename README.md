@@ -1,4 +1,4 @@
-# nonown
+# non noun
 
 [![CI test](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml/badge.svg)](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml)
 
@@ -45,7 +45,7 @@ nonnoun({ text: "吾輩は猫である" }).then((result) => {
 
 #### API
 ```ts
-nonnoun(options: {text:string, pack?:string[]}) => Promise<string>
+nonnoun(options: {text:string, pack?:string[]=["■"]}) => Promise<string>
 ```
 
 ## License
