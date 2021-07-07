@@ -1,0 +1,54 @@
+{
+  "name": "nonoun",
+  "version": "0.0.1",
+  "description": "hide a noun",
+  "type": "module",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "bin": {
+    "nonoun": "./lib/cli.js"
+  },
+  "engines": {
+    "node": ">= 12.2.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "ivgtr",
+    "email": "ivgtr.me@gmail.com",
+    "url": "https://github.com/ivgtr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivgtr/nonoun.git"
+  },
+  "homepage": "https://github.com/ivgtr/nonoun#readme",
+  "bugs": {
+    "url": "https://github.com/ivgtr/nonoun/issues"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "lib"
+  ],
+  "scripts": {
+    "dev": "node --loader ts-node/esm ./src/cli.ts",
+    "start": "tsc -w",
+    "type-check": "tsc --noEmit",
+    "prebuild": "node -e 'fs.rmSync(`lib`, {recursive:true, force:true})'",
+    "build": "rollup -c && tsc --emitDeclarationOnly -p tsconfig-build.json",
+    "format": "prettier -w ./src/*"
+  },
+  "devDependencies": {
+    "@types/node": "^16.0.0",
+    "eslint": "^7.30.0",
+    "eslint-config-sumikko": "^1.2.1",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "meow": "^10.0.1",
+    "tiny-segmenter": "^0.2.0"
+  }
+}
