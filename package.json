@@ -1,6 +1,6 @@
 {
   "name": "nonoun",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "nonoun is 名詞を隠します",
   "type": "module",
   "module": "./lib/index.js",
