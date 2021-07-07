@@ -20,3 +20,5 @@ export const nonoun = async (options: Options): Promise<string> => {
     return tokenArr.join("");
   });
 };
+
+export default nonoun;

@@ -41,6 +41,7 @@ const settings = ({ name, format }) => ({
     plugins.commonjs,
     plugins.nodeResolve,
     plugins.babel,
+    plugins.terser,
   ],
 });
 
