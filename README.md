@@ -1,6 +1,6 @@
 # nonown
 
-[![CI test](https://github.com/ivgtr/nonoun/actions/workflows/test.yml/badge.svg)](https://github.com/ivgtr/nonoun/actions/workflows/test.yml)
+[![CI test](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml/badge.svg)](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml)
 
 名詞を隠して置き換えるライブラリ,CLIツール
 
@@ -9,35 +9,35 @@
 ### CLI
 
 ```shell
-$ npm install --global nonoun
+$ npm install --global nonnoun
 ```
 
 ```shell
-$ nonoun --help
+$ nonnoun --help
   Usage
-      $ nonoun <text> [query]
+      $ nonnoun <text> [query]
 
   Examples
-      $ nonoun 吾輩は猫である
+      $ nonnoun 吾輩は猫である
         ■■は■である
 
-      $ nonoun 吾輩は猫である -p ▲
+      $ nonnoun 吾輩は猫である -p ▲
         ▲▲は▲である
 
-      $ nonoun 吾輩は猫である -p ▲,■,●
+      $ nonnoun 吾輩は猫である -p ▲,■,●
         ●■は▲である
 ```
 
 ### Packages
 
 ```shell
-$ npm install nonoun
+$ npm install nonnoun
 ```
 
 ```js
-import nonoun from "nonoun";
+import nonnoun from "nonnoun";
 
-nonoun({ text: "吾輩は猫である" }).then((result) => {
+nonnoun({ text: "吾輩は猫である" }).then((result) => {
   console.log(result)
   // => ■■は■である
 })
@@ -45,7 +45,7 @@ nonoun({ text: "吾輩は猫である" }).then((result) => {
 
 #### API
 ```ts
-nonoun(options: {text:string, pack?:string[]}) => Promise<string>
+nonnoun(options: {text:string, pack?:string[]}) => Promise<string>
 ```
 
 ## License

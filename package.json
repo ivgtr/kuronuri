@@ -1,12 +1,12 @@
 {
-  "name": "nonoun",
+  "name": "nonnoun",
   "version": "1.0.1",
-  "description": "nonoun is 名詞を隠します",
+  "description": "nonnoun is 名詞を隠します",
   "type": "module",
   "module": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "bin": {
-    "nonoun": "./lib/cli.js"
+    "nonnoun": "./lib/cli.js"
   },
   "engines": {
     "node": ">= 12.2.0"
@@ -19,11 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivgtr/nonoun.git"
+    "url": "git+https://github.com/ivgtr/nonnoun.git"
   },
-  "homepage": "https://github.com/ivgtr/nonoun#readme",
+  "homepage": "https://github.com/ivgtr/nonnoun#readme",
   "bugs": {
-    "url": "https://github.com/ivgtr/nonoun/issues"
+    "url": "https://github.com/ivgtr/nonnoun/issues"
   },
   "files": [
     "README.md",

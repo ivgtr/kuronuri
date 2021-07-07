@@ -3,19 +3,19 @@
 import meow from "meow";
 import type { Package } from "update-notifier";
 import updateNotifier from "update-notifier";
-import { nonoun, Options } from "./index.js";
+import { nonnoun, Options } from "./index.js";
 
 const cli = async () => {
   const cli = meow(
     `
 Usage
-  $ nonoun <text> [query]
+  $ nonnoun <text> [query]
 Examples
-  $ nonoun 吾輩は猫である
+  $ nonnoun 吾輩は猫である
   ■■は■である
-  $ nonoun 吾輩は猫である -p ▲
+  $ nonnoun 吾輩は猫である -p ▲
   ▲▲は▲である
-  $ nonoun 吾輩は猫である -p ▲,■,●
+  $ nonnoun 吾輩は猫である -p ▲,■,●
   ●■は▲である
 `,
     {
@@ -41,7 +41,7 @@ Examples
     options.pack = flags.pack.split(",");
   }
 
-  nonoun(options)
+  nonnoun(options)
     .then((text) => {
       console.log(text);
     })

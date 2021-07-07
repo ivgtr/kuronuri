@@ -5,7 +5,7 @@ export type Options = {
   pack?: string[];
 };
 
-export const nonoun = async (options: Options): Promise<string> => {
+export const nonnoun = async (options: Options): Promise<string> => {
   const { text, pack = ["■"] } = options;
 
   return tokenize(text).then((tokens) => {
@@ -21,4 +21,4 @@ export const nonoun = async (options: Options): Promise<string> => {
   });
 };
 
-export default nonoun;
+export default nonnoun;
