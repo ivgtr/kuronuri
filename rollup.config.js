@@ -26,26 +26,39 @@ const plugins = {
   terser: terser(),
 };
 
-const settings = ({ name, format }) => ({
+const settings = ({ name, format, plugins }) => ({
   input: `./src/${name}.ts`,
   output: {
     file: `./lib/${name}.js`,
     format,
     sourcemap: true,
   },
-  plugins: [
-    plugins.externals,
-    plugins.shebang,
-    plugins.json,
-    plugins.typescript,
-    plugins.commonjs,
-    plugins.nodeResolve,
-    plugins.babel,
-    plugins.terser,
-  ],
+  plugins,
 });
 
 export default [
-  settings({ name: "cli", format: "esm" }),
-  settings({ name: "index", format: "esm" }),
+  settings({
+    name: "cli",
+    format: "esm",
+    plugins: [
+      plugins.shebang,
+      plugins.externals,
+      plugins.json,
+      plugins.typescript,
+      plugins.commonjs,
+      plugins.nodeResolve,
+      plugins.babel,
+    ],
+  }),
+  settings({
+    name: "index",
+    format: "esm",
+    plugins: [
+      plugins.externals,
+      plugins.typescript,
+      plugins.commonjs,
+      plugins.nodeResolve,
+      plugins.babel,
+    ],
+  }),
 ];

@@ -1,9 +1,11 @@
+#!/usr/bin/env node
+
 import meow from "meow";
 import type { Package } from "update-notifier";
 import updateNotifier from "update-notifier";
 import { nonoun, Options } from "./index.js";
 
-export default (() => {
+const cli = async () => {
   const cli = meow(
     `
 Usage
@@ -46,4 +48,6 @@ Examples
     .catch((err) => {
       console.log(err.message);
     });
-})();
+};
+
+cli();
