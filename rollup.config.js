@@ -29,9 +29,10 @@ const plugins = {
 const settings = ({ name, format, plugins }) => ({
   input: `./src/${name}.ts`,
   output: {
-    file: `./lib/${name}.js`,
+    file: `./lib/${name}.${format === "esm" ? "js" : "cjs"}`,
     format,
     sourcemap: true,
+    exports: "named",
   },
   plugins,
 });
@@ -53,6 +54,17 @@ export default [
   settings({
     name: "index",
     format: "esm",
+    plugins: [
+      plugins.externals,
+      plugins.typescript,
+      plugins.commonjs,
+      plugins.nodeResolve,
+      plugins.babel,
+    ],
+  }),
+  settings({
+    name: "index",
+    format: "cjs",
     plugins: [
       plugins.externals,
       plugins.typescript,
