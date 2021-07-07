@@ -3,7 +3,7 @@
 import meow from "meow";
 import type { Package } from "update-notifier";
 import updateNotifier from "update-notifier";
-import { nonnoun, Options } from "./index.js";
+import { exchanging, Options } from "./index.js";
 
 const cli = async () => {
   const cli = meow(
@@ -24,6 +24,7 @@ Examples
         pack: {
           type: "string",
           alias: "p",
+          default: "■",
         },
       },
     }
@@ -32,6 +33,7 @@ Examples
   updateNotifier({ pkg: cli.pkg as Package }).notify();
 
   const { input, flags } = cli;
+  if (!input.length || cli.flags?.h) cli.showHelp();
 
   const options: Options = {
     text: input[0],
@@ -41,7 +43,7 @@ Examples
     options.pack = flags.pack.split(",");
   }
 
-  nonnoun(options)
+  exchanging(options)
     .then((text) => {
       console.log(text);
     })
