@@ -35,9 +35,9 @@ $ npm install nonnoun
 ```
 
 ```js
-import nonnoun from "nonnoun";
+import { exchanging } from "nonnoun";
 
-nonnoun({ text: "吾輩は猫である" }).then((result) => {
+exchanging({ text: "吾輩は猫である" }).then((result) => {
   console.log(result)
   // => ■■は■である
 })
@@ -45,7 +45,7 @@ nonnoun({ text: "吾輩は猫である" }).then((result) => {
 
 #### API
 ```ts
-nonnoun(options: {text:string, pack?:string[]=["■"]}) => Promise<string>
+exchanging(options: {text:string, pack?:string[]=["■"]}) => Promise<string>
 ```
 
 ## License
