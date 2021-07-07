@@ -33,6 +33,8 @@ Examples
   updateNotifier({ pkg: cli.pkg as Package }).notify();
 
   const { input, flags } = cli;
+
+  if (cli.flags?.v) cli.showVersion();
   if (!input.length || cli.flags?.h) cli.showHelp();
 
   const options: Options = {
