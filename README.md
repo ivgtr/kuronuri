@@ -1,6 +1,8 @@
 # nonown
 
-名詞を隠す to 置き換える
+[![CI test](https://github.com/ivgtr/nonoun/actions/workflows/test.yml/badge.svg)](https://github.com/ivgtr/nonoun/actions/workflows/test.yml)
+
+名詞を隠して置き換えるライブラリ,CLIツール
 
 ## Usages
 
