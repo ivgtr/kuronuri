@@ -7,11 +7,17 @@
     "cli"
   ],
   "type": "module",
-  "main": "./lib/index.cjs",
-  "module": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "bin": {
-    "nonnoun": "./lib/cli.js"
+    "nonnoun": "./dist/cli.js"
   },
   "engines": {
     "node": ">= 12.2.0"
@@ -31,7 +37,7 @@
     "url": "https://github.com/ivgtr/nonnoun/issues"
   },
   "files": [
-    "lib",
+    "dist",
     "src/index.ts",
     "src/cli.ts"
   ],
@@ -40,7 +46,7 @@
     "start": "tsc -w",
     "type-check": "tsc --noEmit",
     "type-build": "tsc --project ./tsconfig-build.json --emitDeclarationOnly",
-    "prebuild": "node -e 'fs.rmSync(`lib`, {recursive:true, force:true})'",
+    "prebuild": "node -e 'fs.rmSync(`dist`, {recursive:true, force:true})'",
     "build": "rollup -c && npm run type-build",
     "format": "prettier -w ./src/*",
     "test": "jest"
@@ -54,7 +60,7 @@
     "@rollup/plugin-node-resolve": "13.0.4",
     "@rollup/plugin-typescript": "8.2.5",
     "@types/jest": "26.0.24",
-    "@types/node": "16.0.0",
+    "@types/node": "16.6.1",
     "@types/update-notifier": "5.1.0",
     "eslint": "7.32.0",
     "eslint-config-sumikko": "1.2.2",
@@ -70,7 +76,7 @@
   },
   "dependencies": {
     "kuromojin": "^3.0.0",
-    "meow": "^10.0.1",
+    "meow": "^10.1.1",
     "update-notifier": "^5.1.0"
   },
   "jest": {
