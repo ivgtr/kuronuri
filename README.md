@@ -2,7 +2,7 @@
 
 [![CI test](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml/badge.svg)](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml)
 
-名詞を隠して置き換えるライブラリ,CLIツール
+名詞を隠して任意の文字に置き換えます
 
 ## Usages
 
