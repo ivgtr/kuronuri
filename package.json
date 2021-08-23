@@ -85,7 +85,7 @@
         "useESM": true
       }
     },
-    "preset": "ts-jest/presets/default-esm",
+    "preset": "ts-jest/presets/js-with-ts-esm",
     "testEnvironment": "node",
     "roots": [
       "<rootDir>/src"
