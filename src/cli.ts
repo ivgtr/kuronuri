@@ -12,11 +12,11 @@ Usage
   $ kuronuri <text> [query]
 Examples
   $ kuronuri 吾輩は猫である
-  ■■は■である
+  ██は█である
   $ kuronuri 吾輩は猫である -p ▲
   ▲▲は▲である
-  $ kuronuri 吾輩は猫である -p ▲,■,●
-  ●■は▲である
+  $ kuronuri 吾輩は猫である -p あああ,いいい,ううう
+  うううあああはいいいである
 `,
     {
       importMeta: import.meta,
@@ -24,7 +24,7 @@ Examples
         pack: {
           type: "string",
           alias: "p",
-          default: "■",
+          default: "█",
         },
       },
     }
