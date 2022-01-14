@@ -1,41 +1,41 @@
-# non noun
+# kuronuri
 
-[![CI test](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml/badge.svg)](https://github.com/ivgtr/nonnoun/actions/workflows/test.yml)
+[![CI test](https://github.com/ivgtr/kuronuri/actions/workflows/test.yml/badge.svg)](https://github.com/ivgtr/kuronuri/actions/workflows/test.yml)
 
-名詞を隠して任意の文字に置き換えます
+🤦 Nouns that lead to personal identification can be blacked out.
 
 ## Usages
 
 ### CLI
 
 ```shell
-$ npm install --global nonnoun
+$ npm install --global kuronuri
 ```
 
 ```shell
-$ nonnoun --help
+$ kuronuri --help
   Usage
-      $ nonnoun <text> [query]
+      $ kuronuri <text> [query]
 
   Examples
-      $ nonnoun 吾輩は猫である
+      $ kuronuri 吾輩は猫である
         ■■は■である
 
-      $ nonnoun 吾輩は猫である -p ▲
+      $ kuronuri 吾輩は猫である -p ▲
         ▲▲は▲である
 
-      $ nonnoun 吾輩は猫である -p ▲,■,●
+      $ kuronuri 吾輩は猫である -p ▲,■,●
         ●■は▲である
 ```
 
 ### Packages
 
 ```shell
-$ npm install nonnoun
+$ npm install kuronuri
 ```
 
 ```js
-import { exchanging } from "nonnoun";
+import { exchanging } from "kuronuri";
 
 exchanging({ text: "吾輩は猫である" }).then((result) => {
   console.log(result)

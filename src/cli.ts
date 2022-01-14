@@ -9,13 +9,13 @@ const cli = async () => {
   const cli = meow(
     `
 Usage
-  $ nonnoun <text> [query]
+  $ kuronuri <text> [query]
 Examples
-  $ nonnoun 吾輩は猫である
+  $ kuronuri 吾輩は猫である
   ■■は■である
-  $ nonnoun 吾輩は猫である -p ▲
+  $ kuronuri 吾輩は猫である -p ▲
   ▲▲は▲である
-  $ nonnoun 吾輩は猫である -p ▲,■,●
+  $ kuronuri 吾輩は猫である -p ▲,■,●
   ●■は▲である
 `,
     {

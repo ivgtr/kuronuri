@@ -1,4 +1,4 @@
-import nonnoun from "../";
+import kuronuri from "..";
 
 describe("Check return", () => {
   const text = "吾輩は猫である";
@@ -6,14 +6,14 @@ describe("Check return", () => {
 
   test("return default", async () => {
     const ans = "■■は■である";
-    const result = await nonnoun({ text });
+    const result = await kuronuri({ text });
 
     expect(result).toBe(ans);
   });
 
   test("return pack setting", async () => {
     const ans = "▲▲は▲である";
-    const result = await nonnoun({ text, pack });
+    const result = await kuronuri({ text, pack });
 
     expect(result).toBe(ans);
   });
