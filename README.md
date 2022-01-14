@@ -19,13 +19,13 @@ $ kuronuri --help
 
   Examples
       $ kuronuri 吾輩は猫である
-        ■■は■である
+        ██は█である
 
       $ kuronuri 吾輩は猫である -p ▲
         ▲▲は▲である
 
-      $ kuronuri 吾輩は猫である -p ▲,■,●
-        ●■は▲である
+      $ kuronuri 吾輩は猫である -p ▲,█,●
+        ●█は▲である
 ```
 
 ### Packages
@@ -37,15 +37,16 @@ $ npm install kuronuri
 ```js
 import { exchanging } from "kuronuri";
 
-exchanging({ text: "吾輩は猫である" }).then((result) => {
-  console.log(result)
-  // => ■■は■である
-})
+exchanging("吾輩は猫である").then((result) => {
+  console.log(result);
+  // => ██は█である
+});
 ```
 
 #### API
+
 ```ts
-exchanging(options: {text:string, pack?:string[]=["■"]}) => Promise<string>
+exchanging(text:string, options?:{pack?:string[]=["█"]}) => Promise<string>
 ```
 
 ## License

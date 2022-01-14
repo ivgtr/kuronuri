@@ -37,15 +37,14 @@ Examples
   if (cli.flags?.v) cli.showVersion();
   if (!input.length || cli.flags?.h) cli.showHelp();
 
-  const options: Options = {
-    text: input[0],
-  };
+  const text = input[0];
+  let options: Options = {};
 
   if (flags?.pack) {
     options.pack = flags.pack.split(",");
   }
 
-  exchanging(options)
+  exchanging(text, options)
     .then((text) => {
       console.log(text);
     })
